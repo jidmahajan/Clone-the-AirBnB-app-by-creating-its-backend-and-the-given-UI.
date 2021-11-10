@@ -1,0 +1,68 @@
+
+Installation Steps
+------------------
+### Server Requirements
+
+	* PHP Version - 5.2.7+ (preferably 5.3.5)
+        Extensions
+            GD Version - 2.x+
+            PCRE Version - 7.x+
+            cURL version - 7.x+
+            json version - 1.x+
+            PDO
+            Freetype
+            mbstring
+            PHP ionCube Loader
+        php.ini settings
+            max_execution_time - 180 (not mandatory)
+            max_input_time - 6000 (not mandatory)
+            memory_limit - 128M (at least 32M)
+            safe_mode - off
+            open_basedir - No Value
+            display_error = On
+            magic_quotes_gpc = Off
+    * MySQL Version - 5.x
+    * Apache - 1+ (preferably 2+)
+        Modules
+            mod_rewrite
+            mod_deflate (not mandatory, but highly recommended for better performance–gzip)
+            mod_expires (not mandatory, but highly recommended for better performance–browser caching)
+    Recommended Linux distributions: Centos / Ubuntu / RedHat
+
+### Initial Configurations
+
+* Extract Files
+
+		Unzip the zip file
+
+		Upload the unzipped files in server.
+
+* Need write permission for following folders
+
+Note: The above folders need to be writable (Have to chmod to 655 or 755 or 775 depending upon the server configuration. Note: 777 is highly discouraged).
+
+    Make sure the permission as read,write and executable as recursively for the below directories
+
+    app/Config
+    app/media
+    app/tmp
+    app/webroot
+    app/webroot/js
+    app/webroot/img
+    app/webroot/css
+    app/Console/Command/cron.sh
+    app/Console/Command/CronShell.php
+    core/lib/Cake/Console/cake
+    core/vendors/securimage
+
+### Updating site logo
+
+There are few places where site logo is located. To change the logo, you need to replace your logo with the exact name and resolution in the following mentioned directories.
+
+* Site Logo
+
+    	app/webroot/img/logo.png                      - 285 x 57
+
+* Favicon
+
+     	app/webroot/favicon.ico                        - 16 x 16
